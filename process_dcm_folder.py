@@ -16,19 +16,16 @@ import pydicom as pdcm
 main_fldr = '/home/jilberto/Desktop/Dicom/DSP-1/4981/4981/'
 
 to_convert = {
-            'SA': '4986',
-            'LA_4CH': '4985',
-            'LA_3CH': '4987',
-            'LA_2CH': '4984',
+            'SA_LGE': '49813',
             }
 
 
-for scan_name, scan in to_convert.items():
+for scan_name, scan_fldr in to_convert.items():
     tmp_fldr = 'tmp/'
     if not os.path.exists(tmp_fldr):
         os.makedirs(tmp_fldr)
         
-    all_files = glob.glob(f'{main_fldr}/{scan}/*', recursive=True)
+    all_files = glob.glob(f'{main_fldr}/{scan_fldr}/*', recursive=True)
 
     # Read only dcm files
     dcm_files = []
