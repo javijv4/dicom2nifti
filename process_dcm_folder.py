@@ -13,7 +13,7 @@ from subprocess import Popen
 import shutil
 import pydicom as pdcm
 
-main_fldr = 'test_data/'
+main_fldr = '/home/jilberto/Desktop/Dicom/DSP-1/4981/4981/'
 
 to_convert = {
             'SA': '4986',
@@ -23,7 +23,7 @@ to_convert = {
             }
 
 
-for name, scan in to_convert.items():
+for scan_name, scan in to_convert.items():
     tmp_fldr = 'tmp/'
     if not os.path.exists(tmp_fldr):
         os.makedirs(tmp_fldr)
@@ -78,7 +78,7 @@ for name, scan in to_convert.items():
 
     # Convert to nii
     with open('dcm2niix.log', 'w') as f:
-        p = Popen(['dcm2niix', '-o', main_fldr, '-f', name, '-z', 'y', 'm', 'y', tmp_fldr])
+        p = Popen(['dcm2niix', '-o', main_fldr, '-f', scan_name, '-z', 'y', 'm', 'y', tmp_fldr])
         p.wait()
 
     # Clean
