@@ -16,7 +16,7 @@ import pydicom as pdcm
 main_fldr = '/home/jilberto/Desktop/Dicom/DSP-1/4981/4981/'
 
 to_convert = {
-            'SA_LGE': '49813',
+            'LA_4CH_LGE': '49814',
             }
 
 
@@ -71,6 +71,11 @@ for scan_name, scan_fldr in to_convert.items():
             name = os.path.basename(scan)
             img = pdcm.dcmread(scan)
             img.TriggerTime = str(fix_time)
+            img.save_as(f'{tmp_fldr}/{name}')
+    else:
+        for scan in dcm_files:
+            name = os.path.basename(scan)
+            img = pdcm.dcmread(scan)
             img.save_as(f'{tmp_fldr}/{name}')
 
     # Convert to nii
