@@ -13,10 +13,10 @@ from subprocess import Popen
 import shutil
 import pydicom as pdcm
 
-main_fldr = '/home/jilberto/Desktop/Dicom/DSP-1/4981/4981/'
+main_fldr = '/home/jilberto/Desktop/Dicom/DSP-16/6631/6631/'
 
 to_convert = {
-            'LA_4CH_LGE': '49814',
+            'SA': '66320',
             }
 
 

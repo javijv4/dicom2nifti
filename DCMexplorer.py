@@ -9,7 +9,7 @@ Created on Wed Nov 11 18:08:25 2020
 import pydicom as pdcm
 import os
 
-path = '//home/jilberto/Desktop/Dicom/DSP-1/4981/4981/'
+path = '/home/jilberto/Desktop/Dicom/DSP-16/6631/6631/'
 lista = os.listdir(path)
 
 new_list = []
