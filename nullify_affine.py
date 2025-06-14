@@ -10,7 +10,7 @@ import os
 import nibabel as nib
 import numpy as np
 
-path = '/home/jilberto/Dropbox (University of Michigan)/Projects/Desmoplakin/Models/DSPPatients2/DSP-14/Images/LA_2CH.nii.gz'
+path = '/home/jilberto/Desktop/Dicom/DSP-10/6531/SA.nii.gz'
 img = nib.load(path)
 
 new_img = nib.Nifti1Image(img.get_fdata(), np.eye(4))

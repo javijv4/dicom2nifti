@@ -9,7 +9,7 @@ Created on Wed Nov 11 18:08:25 2020
 import pydicom as pdcm
 import os
 
-path = '/home/jilberto/Desktop/Dicom/DSP-1/4981/'
+path = '/home/jilberto/Desktop/Dicom/DSP-10/6531/'
 lista = os.listdir(path)
 
 new_list = []
@@ -19,7 +19,7 @@ for l in lista:
    except:
        continue
    new_list.append(l)
-lista = list(map(int, new_list))
+# lista = list(map(int, new_list))
 lista.sort()
 
 SA_scan = None

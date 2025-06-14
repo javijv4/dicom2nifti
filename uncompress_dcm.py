@@ -11,14 +11,11 @@ import pydicom as pdcm
 from subprocess import Popen
 import glob
 
-main_fldr = '/home/jilberto/Desktop/Dicom/DSP-3/5011191/'
-output_fldr = '/home/jilberto/Desktop/Dicom/DSP-3/5011191/'
+main_fldr = '/home/jilberto/Desktop/Dicom/DSP-1/4981/'
+output_fldr = '/home/jilberto/Desktop/Dicom/DSP-1/4981/'
 
 to_convert = {
-            'SA': '5011200',
-            # 'LA_2CH': '5011198',
-            # 'LA_3CH': '5011201',
-            # 'LA_4CH': '5011199',
+            'SA': '4986',
             # 'LA_2CHr': '5011202',
             # 'SA_LGE': '5011206',
             # 'LA_4CH_LGE': '5011208',
